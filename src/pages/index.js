@@ -11,14 +11,14 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-
+    console.log("author:", author.node);
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            <h2 className="section-headline">Recent Articles</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -39,7 +39,10 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(
+      limit: 3
+      sort: { fields: [publishDate], order: DESC }
+      ) {
       edges {
         node {
           title
@@ -47,8 +50,8 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: FILL,cropFocus: FACE) {
+              ...GatsbyContentfulFluid
             }
           }
           description {
@@ -71,8 +74,7 @@ export const pageQuery = graphql`
           title
           heroImage: image {
             fluid(
-              maxWidth: 1180
-              maxHeight: 480
+              maxWidth: 1920
               resizingBehavior: PAD
               background: "rgb:000000"
             ) {

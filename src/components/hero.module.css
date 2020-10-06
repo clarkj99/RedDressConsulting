@@ -1,8 +1,11 @@
 .hero {
   position: relative;
-  background: #000;
+  background-color: transparent;
   color: #fff;
   text-align: center;
+  height: 400px;
+  max-height: 400px;
+  background-position: top;
 }
 
 .heroImage {
@@ -11,7 +14,7 @@
     the viewport width
   */
   height: 61.8vh;
-  max-height: 400px;
+  max-height: 600px;
 }
 
 .heroDetails {
@@ -24,13 +27,13 @@
   padding: 0 0.5em;
 }
 
-@media(min-width: 600px) {
+@media (min-width: 600px) {
   .heroDetails {
     font-size: 16px;
   }
 }
 
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
   .heroDetails {
     font-size: 20px;
   }
