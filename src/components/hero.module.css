@@ -3,8 +3,8 @@
   background-color: transparent;
   color: #fff;
   text-align: center;
-  height: 400px;
-  max-height: 400px;
+  height: 80vh;
+  max-height: 80vhx;
   background-position: top;
 }
 
@@ -14,13 +14,14 @@
     the viewport width
   */
   height: 61.8vh;
-  max-height: 600px;
+  max-height: 1200px;
 }
 
 .heroDetails {
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
   left: 50%;
+  width: 80%;
   bottom: 0;
   transform: translate(-50%, 0);
   font-size: 14px;
@@ -46,5 +47,10 @@
 .heroTitle {
   margin: 0;
   font-size: 1.125em;
+  font-weight: bold;
+}
+
+.heroTyped {
+  font-size: 1.5em;
   font-weight: bold;
 }
