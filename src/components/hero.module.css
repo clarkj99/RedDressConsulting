@@ -1,11 +1,12 @@
 .hero {
   position: relative;
-  background-color: transparent;
+  background-color: #f4edee;
   color: #fff;
   text-align: center;
   height: 80vh;
   max-height: 80vhx;
-  background-position: top;
+  display: flex;
+  justify-content: space-around;
 }
 
 .heroImage {
@@ -13,19 +14,17 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  height: 61.8vh;
-  max-height: 1200px;
+  flex: 1;
+  padding: 0px;
+  max-width: 600px;
+  max-height: 900px;
 }
 
 .heroDetails {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.7);
-  left: 50%;
-  width: 80%;
-  bottom: 0;
-  transform: translate(-50%, 0);
+  flex: 1;
   font-size: 14px;
   padding: 0 0.5em;
+  color: #000;
 }
 
 @media (min-width: 600px) {

@@ -1,0 +1,9 @@
+.logo {
+  font-family: "Great Vibes", cursive;
+  font-size: 3em;
+  text-align: center;
+  color: #990000;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}

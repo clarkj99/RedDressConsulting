@@ -74,9 +74,9 @@ export const pageQuery = graphql`
           title
           heroImage: image {
             fluid(
-              maxWidth: 1920
+              maxWidth: 600
               resizingBehavior: PAD
-              background: "rgb:000000"
+              background: "rgb:f4edee"
             ) {
               ...GatsbyContentfulFluid_tracedSVG
             }

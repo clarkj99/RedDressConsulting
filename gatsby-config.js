@@ -25,7 +25,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful starter",
+    title: "Red Dress Consulting",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
@@ -37,5 +37,16 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Great Vibes`,
+          `Comfortaa`,
+          `Roboto`
+        ],
+        display: 'swap'
+      }
+    }
   ],
 };
