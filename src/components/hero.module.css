@@ -2,11 +2,11 @@
   position: relative;
   background-color: #f4edee;
   color: #fff;
-  text-align: center;
+  text-align: left;
   height: 80vh;
   max-height: 80vhx;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .heroImage {
@@ -15,9 +15,12 @@
     the viewport width
   */
   flex: 1;
-  padding: 0px;
-  max-width: 600px;
-  max-height: 900px;
+  margin: 0 30px 30px;
+  /* width: 40%; */
+  min-width: 400px;
+  background-color: #000;
+  background-position: top;
+  box-shadow: 4px 4px 5px #33333350;
 }
 
 .heroDetails {
@@ -25,11 +28,12 @@
   font-size: 14px;
   padding: 0 0.5em;
   color: #000;
+  /* align-self: center; */
 }
 
 @media (min-width: 600px) {
   .heroDetails {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
