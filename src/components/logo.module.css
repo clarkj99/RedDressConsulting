@@ -1,10 +1,16 @@
 .logo {
   font-family: "Great Vibes", cursive;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
-  color: #990000;
+  color: #ff0028;
   align-self: center;
   display: flex;
   background-color: #f4edee;
   justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    font-size: 3em;
+  }
 }

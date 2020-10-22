@@ -1,23 +1,24 @@
 .hero {
-  position: relative;
   background-color: #f4edee;
-  color: #fff;
   text-align: left;
-  height: 80vh;
+  /* height: 80vh; */
+  min-height: 600px;
   max-height: 80vhx;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+.section {
+  background-color: #f4edee;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .heroImage {
-  /*
-    Ensure golden ratio for the hero size while limiting it to some extend to
-    the viewport width
-  */
   flex: 1;
-  margin: 0 30px 30px;
+  margin: 0 0 30px;
   /* width: 40%; */
-  min-width: 400px;
+  min-height: 400px;
   background-color: #000;
   background-position: top;
   box-shadow: 4px 4px 5px #33333350;
@@ -26,14 +27,20 @@
 .heroDetails {
   flex: 1;
   font-size: 14px;
-  padding: 0 0.5em;
+  margin: 0;
   color: #000;
   /* align-self: center; */
 }
 
 @media (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+  }
   .heroDetails {
     font-size: 18px;
+  }
+  .heroImage {
+    margin: 0 30px 30px 0;
   }
 }
 
@@ -44,16 +51,13 @@
 }
 
 .heroHeadline {
-  margin: 0;
+  margin: 0 0 30px;
+  font-size: 2em;
+  line-height: 1.2em;
 }
 
 .heroTitle {
   margin: 0;
   font-size: 1.125em;
-  font-weight: bold;
-}
-
-.heroTyped {
-  font-size: 1.5em;
   font-weight: bold;
 }
