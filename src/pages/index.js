@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import Mission from '../components/mission'
 import Whatido from '../components/whatido'
+import Footer from '../components/footer'
 
 class RootIndex extends React.Component {
   render() {
@@ -35,6 +36,7 @@ class RootIndex extends React.Component {
               </ul>
             </div>
           </section>
+          <Footer />
         </div>
       </Layout>
     )

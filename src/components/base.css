@@ -82,3 +82,29 @@ a {
 .list-inline li {
   display: inline-block;
 }
+.button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ff0028;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .button {
+    align-self: center;
+  }
+}
