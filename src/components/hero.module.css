@@ -17,9 +17,7 @@
 .heroImage {
   flex: 1;
   margin: 0 0 30px;
-  /* width: 40%; */
   min-height: 400px;
-  background-color: #000;
   background-position: top;
   box-shadow: 4px 4px 5px #33333350;
 }

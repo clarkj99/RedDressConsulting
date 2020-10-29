@@ -67,28 +67,28 @@ a {
 
 .service-image {
   flex: 1;
-  padding: 50px;
-  background-position: top;
-  background-clip: border-box;
-  border: 3px solid #000000;
+  display: flex;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  /* background-position: top; */
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .service-img {
   border-radius: 30px;
   max-width: 200px;
   height: 200px;
-  object-fit: fill;
 }
 
 .service-num {
   flex: 1;
   display: flex;
   justify-content: center;
-  position: relative;
-  /* bottom: 250px; */
-  font-size: 72px;
-  margin-top: -250px;
+  align-items: flex-end;
+  height: 266px;
+  font-size: 36px;
+  text-shadow: 3px 3px 3px #00000050;
 }
 
 /**
@@ -150,32 +150,39 @@ a {
   .button {
     align-self: center;
   }
-  .service-img {
-    max-width: 300px;
-    height: 300px;
+  .service-num {
+    height: 266px;
+    font-size: 40px;
+    /* margin-top: -150px; */
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .service-img {
-    max-width: 400px;
-    height: 600px;
+  .service-num {
+    height: 341px;
+    font-size: 72px;
+    /* margin-top: -250px; */
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .service-img {
-    max-width: 400px;
-    height: 600px;
+  .service {
+    max-width: calc(33% - 30px);
+  }
+  .service-num {
+    height: 440px;
+    font-size: 72px;
+    /* margin-top: -250px; */
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .service-img {
-    max-width: 400px;
-    height: 600px;
+  .service-num {
+    height: 533px;
+    font-size: 72px;
+    /* margin-top: -250px; */
   }
 }

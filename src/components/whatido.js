@@ -6,15 +6,15 @@ import Img from 'gatsby-image'
 const ServicesBlock = ({ service }) => (
 
     <div className="service">
-        {/* <BackgroundImage
+        <BackgroundImage
             className="service-image"
-            fixed={service.image.fixed}
+            fluid={service.image.fluid}
         >
             <div className="service-num">
-                <p>{service.order}</p>
+                <p style={{ margin: 0 }}>{service.order}</p>
             </div>
-        </BackgroundImage > */}
-        <div>
+        </BackgroundImage >
+        {/* <div>
             <Img
                 className="service-img"
                 fluid={service.image.fluid}
@@ -22,8 +22,8 @@ const ServicesBlock = ({ service }) => (
             <div className="service-num">
                 <p>{service.order}</p>
             </div>
-        </div>
-        <div style={{ flex: 1 }}>
+        </div> */}
+        <div style={{ flex: 0 }}>
             <p>paragraph</p>
         </div>
     </div >
@@ -41,7 +41,7 @@ const Whatido = ({ services }) => {
                     {services.map(service => <ServicesBlock key={service.node.id} service={service.node} />)}
 
                 </div>
-                <Link to="/contact/" className="button" style={{ flex: 1, borderRadius: 30 }}>Contact for Complimentary Consultation AND to Discuss Services and Rates</Link>
+                <Link to="/contact/" className="button" style={{ flex: 0, borderRadius: 30 }}>Contact for Complimentary Consultation AND to Discuss Services and Rates</Link>
             </div>
         </section >
     )
