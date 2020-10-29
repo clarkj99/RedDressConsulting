@@ -14,14 +14,15 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-    console.log("author:", author.node);
+    const services = get(this, 'props.data.allContentfulService.edges')
+
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <Mission />
-          <Whatido />
+          <Whatido services={services} />
           <section>
             <div className="wrapper">
               <h2 className="section-headline">Recent Articles</h2>
@@ -89,6 +90,33 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
+        }
+      }
+    }
+    allContentfulService 
+    (sort:{fields:order}){
+      edges {
+        node {
+          id
+          order
+          longDescription {
+            childMarkdownRemark {
+              html
+            }
+          }
+          image {
+            fluid (
+              maxWidth: 1200,
+              resizingBehavior: PAD,
+              background: "rgb:f4edee"
+            ){
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+            fixed(height: 900, width: 600, cropFocus: FACES) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+          description
         }
       }
     }
