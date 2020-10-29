@@ -112,11 +112,8 @@ export const pageQuery = graphql`
             ){
               ...GatsbyContentfulFluid_tracedSVG
             }
-            fixed(height: 900, width: 600, cropFocus: FACES) {
-              ...GatsbyContentfulFixed_tracedSVG
-            }
+           
           }
-          description
         }
       }
     }

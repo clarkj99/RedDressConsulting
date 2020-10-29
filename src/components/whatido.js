@@ -1,9 +1,9 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image';
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 
 const ServicesBlock = ({ service }) => (
+    //TODO make a list (ul) for equal height
 
     <div className="service">
         <BackgroundImage
@@ -14,17 +14,8 @@ const ServicesBlock = ({ service }) => (
                 <p style={{ margin: 0 }}>{service.order}</p>
             </div>
         </BackgroundImage >
-        {/* <div>
-            <Img
-                className="service-img"
-                fluid={service.image.fluid}
-            />
-            <div className="service-num">
-                <p>{service.order}</p>
-            </div>
-        </div> */}
-        <div style={{ flex: 0 }}>
-            <p>paragraph</p>
+        <div style={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <div style={{ textAlign: "center", height: "100%" }} dangerouslySetInnerHTML={{ __html: service.longDescription.childMarkdownRemark.html }}></div>
         </div>
     </div >
 
