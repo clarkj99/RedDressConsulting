@@ -15,7 +15,7 @@
 }
 
 .heroImage {
-  flex: 1;
+  flex: 10;
   margin: 0 0 30px;
   min-height: 400px;
   background-position: top;
@@ -23,11 +23,15 @@
 }
 
 .heroDetails {
-  flex: 1;
+  flex: 16;
   font-size: 14px;
   margin: 0;
   color: #000;
   /* align-self: center; */
+}
+
+.button {
+  border-radius: 0px;
 }
 
 @media (min-width: 600px) {

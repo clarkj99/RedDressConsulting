@@ -17,7 +17,7 @@ export default ({ data }) => {
         <div className={styles.heroDetails}>
           <h3 className={styles.heroHeadline}>{data.title}</h3>
           <p className={styles.heroTitle}>{data.shortBio.shortBio}</p>
-          <Link to="/contact/" className="button">Contact Me</Link>
+          <Link to="/contact/" className={'button ' + styles.button}>Contact Me</Link>
         </div>
       </div>
     </section>
