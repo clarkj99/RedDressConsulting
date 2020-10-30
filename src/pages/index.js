@@ -87,7 +87,7 @@ export const pageQuery = graphql`
               resizingBehavior: PAD
               background: "rgb:f4edee"
             ) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
@@ -110,7 +110,7 @@ export const pageQuery = graphql`
               resizingBehavior: PAD,
               background: "rgb:f4edee"
             ){
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
            
           }
