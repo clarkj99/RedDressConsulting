@@ -1,16 +1,17 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image';
 import { Link } from 'gatsby'
+import styles from './whatido.module.css'
 
 const ServicesBlock = ({ service }) => (
     //TODO make a list (ul) for equal height
 
-    <div className="service">
+    <div className={styles.service}>
         <BackgroundImage
-            className="service-image"
+            className={styles.serviceImage}
             fluid={service.image.fluid}
         >
-            <div className="service-num">
+            <div className={styles.serviceNum}>
                 <p style={{ margin: 0 }}>{service.order}</p>
             </div>
         </BackgroundImage >
@@ -18,8 +19,6 @@ const ServicesBlock = ({ service }) => (
             <div style={{ textAlign: "center", height: "100%" }} dangerouslySetInnerHTML={{ __html: service.longDescription.childMarkdownRemark.html }}></div>
         </div>
     </div >
-
-
 )
 
 const Whatido = ({ services }) => {
@@ -28,7 +27,7 @@ const Whatido = ({ services }) => {
         <section style={{ backgroundColor: "#C41E2C", color: "#FFFFFF" }} >
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <h2>What I Do</h2>
-                <div className="services-list">
+                <div className={styles.servicesList}>
                     {services.map(service => <ServicesBlock key={service.node.id} service={service.node} />)}
 
                 </div>
