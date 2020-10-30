@@ -31,7 +31,7 @@ const Whatido = ({ services }) => {
                     {services.map(service => <ServicesBlock key={service.node.id} service={service.node} />)}
 
                 </div>
-                <Link to="/contact/" className="button">Contact for Complimentary Consultation AND to Discuss Services and Rates</Link>
+                <Link to="/contact/" className={'button ' + styles.button}>Contact for Complimentary Consultation AND to Discuss Services and Rates</Link>
             </div>
         </section >
     )
