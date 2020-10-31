@@ -4,7 +4,6 @@ import { faLinkedin, faFacebookSquare, faInstagramSquare } from '@fortawesome/fr
 import { Link } from 'gatsby';
 
 const Footer = ({ author }) => {
-    console.log("author", author);
     return (
         <section style={{ backgroundColor: "#000000", color: "#FFFFFF", flex: 1, padding: 30, fontSize: 36 }} >
             <div style={{ flexDirection: "row", display: "flex", justifyContent: "space-evenly" }}>

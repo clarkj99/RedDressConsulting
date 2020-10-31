@@ -5,7 +5,6 @@ import styles from './hero.module.css'
 import { Link } from 'gatsby'
 
 export default ({ data }) => {
-  // console.log(data.heroImage);
   return (
     <section className={styles.section}>
       <div className={styles.hero}>
