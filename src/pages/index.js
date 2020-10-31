@@ -12,7 +12,7 @@ import Footer from '../components/footer'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const posts = get(this, 'props.data.allContentfulTestimonial.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
     const services = get(this, 'props.data.allContentfulService.edges')
 
@@ -48,7 +48,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(
+    allContentfulTestimonial(
       limit: 3
       sort: { fields: [publishDate], order: DESC }
       ) {
