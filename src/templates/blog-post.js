@@ -58,7 +58,7 @@ class TestimonialTemplate extends React.Component {
                         fluid={photo.fluid}
                         objectPosition="top"
                         imgStyle={{ objectPosition: "top", objectFit: "cover", height: "100%" }}
-                        style={{ flex: 1, maxHeight: "30vh", minWidth: 400, maxWidth: 600, margin: 30, backgroundPosition: "top", boxShadow: "4px 4px 5px #33333350", borderRadius: 15 }}
+                        style={{ flex: 1, maxHeight: 400, minWidth: 400, maxWidth: 600, margin: 30, backgroundPosition: "top", boxShadow: "4px 4px 5px #33333350", borderRadius: 15 }}
                       />
                     </a>
                   )
