@@ -1,10 +1,52 @@
 .hero {
+  background-color: #f3eef0;
+  /* min-height: 30vh; */
   display: flex;
+  flex: 1;
   justify-content: center;
-  align-items: center;
+  flex-direction: row;
+}
+.heroImage {
+  flex: 10;
+  margin: 0 30px;
+  box-shadow: 4px 4px 4px #ffffff10;
+}
 
-  height: 12.5em;
-  background: #e1e1e1;
-  margin: -1em -2.5em 1em;
-  font-size: 2em
+.heroDetails {
+  flex: 16;
+  flex-direction: column;
+}
+blockquote {
+  font-weight: 2em;
+  font-style: italic;
+}
+
+.blogImages {
+  flex: 1;
+  max-height: 400px;
+  min-width: 90vw;
+  margin: 30px;
+  background-position: "top";
+  box-shadow: "4px 4px 5px #33333350";
+  border-radius: 15px;
+  min-height: 50vh;
+}
+
+.lightbox {
+  background-color: #990000cc;
+}
+
+@media only screen and (min-width: 600px) {
+  .heroImage {
+    height: 400px;
+    width: 400px;
+  }
+  .blogImages {
+    min-width: 250px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .blogImages {
+    min-width: 300px;
+  }
 }

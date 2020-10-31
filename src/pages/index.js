@@ -25,7 +25,7 @@ class RootIndex extends React.Component {
           <Whatido services={services} />
           <section>
             <div className="wrapper">
-              <h2 className="section-headline">Recent Articles</h2>
+              <h2 className="section-headline">Testimonials</h2>
               <ul className="article-list">
                 {posts.map(({ node }) => {
                   return (

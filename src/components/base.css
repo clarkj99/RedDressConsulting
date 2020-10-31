@@ -25,11 +25,11 @@ section > :only-child {
   flex: 1;
   max-width: 1200px;
 }
-
+/* 
 img {
   display: block;
   width: 100%;
-}
+} */
 
 h1,
 h2,
