@@ -22,7 +22,6 @@ const ServicesBlock = ({ service }) => (
 )
 
 const Whatido = ({ services }) => {
-    console.log(services)
     return (
         <section style={{ backgroundColor: "#C41E2C", color: "#FFFFFF" }} >
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>

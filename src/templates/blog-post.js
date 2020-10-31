@@ -66,7 +66,7 @@ class TestimonialTemplate extends React.Component {
                 </div>
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-evenly" }}>
                   {
                     post.photoGroup.map(
                       (photo, i) => <a onClick={() => this.setState({

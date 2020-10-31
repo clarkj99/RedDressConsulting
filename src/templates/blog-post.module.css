@@ -1,35 +1,35 @@
 .hero {
   background-color: #f3eef0;
-  /* min-height: 30vh; */
   display: flex;
   flex: 1;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .heroImage {
-  flex: 10;
-  margin: 0 30px;
-  box-shadow: 4px 4px 4px #ffffff10;
+  flex: 1;
+  margin: 0 0 30px;
+  min-height: 40vh;
+  box-shadow: 4px 4px 4px #33333380;
 }
 
 .heroDetails {
-  flex: 16;
+  flex: 1;
+  margin: 0 0 30px;
   flex-direction: column;
 }
-blockquote {
-  font-weight: 2em;
+.heroDetails p {
+  font-size: 1.2em;
   font-style: italic;
 }
 
 .blogImages {
   flex: 1;
-  max-height: 400px;
-  min-width: 90vw;
-  margin: 30px;
+  max-height: 40vh;
+  min-width: 40vw;
+  margin: 30px 5px;
   background-position: "top";
   box-shadow: "4px 4px 5px #33333350";
   border-radius: 15px;
-  min-height: 50vh;
 }
 
 .lightbox {
@@ -37,12 +37,21 @@ blockquote {
 }
 
 @media only screen and (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+  }
   .heroImage {
     height: 400px;
+    margin: 0 30px 30px 0;
     width: 400px;
   }
   .blogImages {
     min-width: 250px;
+  }
+  .heroDetails p {
+    font-weight: 2em;
+    font-size: 1.8em;
+    font-style: italic;
   }
 }
 @media only screen and (min-width: 900px) {

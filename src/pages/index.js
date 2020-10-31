@@ -37,7 +37,7 @@ class RootIndex extends React.Component {
               </ul>
             </div>
           </section>
-          <Footer />
+          <Footer author={author.node} />
         </div>
       </Layout>
     )
@@ -49,7 +49,7 @@ export default RootIndex
 export const pageQuery = graphql`
   query HomeQuery {
     allContentfulTestimonial(
-      limit: 3
+      limit: 4
       sort: { fields: [publishDate], order: DESC }
       ) {
       edges {
@@ -89,7 +89,13 @@ export const pageQuery = graphql`
             ) {
               ...GatsbyContentfulFluid
             }
+         
           }
+          email
+          phone
+          facebook
+          instagram
+          linkedIn
         }
       }
     }
