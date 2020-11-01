@@ -4,7 +4,7 @@ import { faLinkedin, faFacebookSquare, faInstagramSquare } from '@fortawesome/fr
 
 const Footer = ({ author }) => {
     return (
-        <section style={{ backgroundColor: "#000000", color: "#FFFFFF", flex: 1, padding: 30, fontSize: 36 }} >
+        <section style={{ backgroundColor: "#000000", color: "#FFFFFF", flex: 1, padding: 10, fontSize: 36 }} >
             <div style={{ flexDirection: "row", display: "flex", justifyContent: "space-evenly" }}>
                 <div>
                     <a href={author.linkedIn} target="blank">

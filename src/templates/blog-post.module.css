@@ -27,8 +27,12 @@
   min-width: 80vw;
   margin: 10px 5px;
   background-position: "top";
-  box-shadow: "4px 4px 5px #33333350";
   border-radius: 15px;
+}
+
+.blogImages:hover {
+  box-shadow: 1px 0px 15px #99000080;
+  cursor: pointer;
 }
 
 .lightbox {
@@ -38,7 +42,7 @@
 @media only screen and (min-width: 400px) {
   .blogImages {
     min-width: 40vw;
-    height: 40vh;
+    height: 60vh;
     margin: 10px 5px;
   }
 }

@@ -1,0 +1,12 @@
+.mission {
+  margin: 30px;
+  max-width: 1000px;
+  font-family: "roboto";
+  font-size: 18px;
+}
+
+@media (min-width: 600px) {
+  .mission {
+    font-size: 24px;
+  }
+}
