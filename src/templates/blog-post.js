@@ -18,11 +18,12 @@ class TestimonialTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulTestimonial')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const [author] = get(this, 'props.data.allContentfulPerson.edges')
     const images = post.photoGroup.map((photo => photo.file.url))
     const { photoIndex, lightboxIsOpen } = this.state
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} author={author.node}>
         {lightboxIsOpen && (
           <Lightbox
             imagePadding={60}
@@ -121,6 +122,19 @@ export const pageQuery = graphql`
         fixed (width: 1200){
             ...GatsbyContentfulFixed
           }
+      }
+    }
+    allContentfulPerson(
+      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
+    ) {
+      edges {
+        node { 
+          email
+          phone
+          facebook
+          instagram
+          linkedIn
+        }
       }
     }
   }

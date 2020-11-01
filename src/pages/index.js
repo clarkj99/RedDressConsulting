@@ -7,7 +7,6 @@ import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import Mission from '../components/mission'
 import Whatido from '../components/whatido'
-import Footer from '../components/footer'
 
 class RootIndex extends React.Component {
   render() {
@@ -17,7 +16,7 @@ class RootIndex extends React.Component {
     const services = get(this, 'props.data.allContentfulService.edges')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} author={author.node}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
@@ -37,7 +36,7 @@ class RootIndex extends React.Component {
               </ul>
             </div>
           </section>
-          <Footer author={author.node} />
+          {/* <Footer author={author.node} /> */}
         </div>
       </Layout>
     )
