@@ -8,8 +8,8 @@
 .heroImage {
   flex: 1;
   margin: 0 0 30px;
-  min-height: 40vh;
-  box-shadow: 1px 0px 15px #33333380;
+  min-height: 400px;
+  /* box-shadow: 1px 0px 0px #33333380; */
 }
 
 .heroDetails {
@@ -25,8 +25,8 @@
 .blogImages {
   flex: 1;
   max-height: 40vh;
-  min-width: 40vw;
-  margin: 30px 5px;
+  min-width: 80vw;
+  margin: 10px 5px;
   background-position: "top";
   box-shadow: "4px 4px 5px #33333350";
   border-radius: 15px;
@@ -36,18 +36,23 @@
   background-color: #990000cc;
 }
 
+@media only screen and (min-width: 400px) {
+  .blogImages {
+    min-width: 40vw;
+    height: 40vh;
+    margin: 10px 5px;
+  }
+}
 @media only screen and (min-width: 600px) {
   .hero {
     flex-direction: row;
   }
   .heroImage {
-    height: 400px;
+    min-height: 400px;
     margin: 0 30px 30px 0;
     width: 400px;
   }
-  .blogImages {
-    min-width: 250px;
-  }
+
   .heroDetails p {
     font-weight: 2em;
     font-size: 1.8em;
@@ -57,5 +62,6 @@
 @media only screen and (min-width: 900px) {
   .blogImages {
     min-width: 300px;
+    margin: 30px 5px;
   }
 }
