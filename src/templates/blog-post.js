@@ -103,7 +103,7 @@ export const pageQuery = graphql`
             title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-            fluid(cropFocus: TOP,resizingBehavior: FILL,maxWidth: 1280, maxHeight:800,background: "rgb:f4edee") {
+            fluid(cropFocus: TOP,resizingBehavior: FILL,maxWidth: 1280,background: "rgb:f4edee") {
             ...GatsbyContentfulFluid
           }
       }

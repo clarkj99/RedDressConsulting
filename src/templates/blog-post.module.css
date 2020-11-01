@@ -1,7 +1,6 @@
 .hero {
   background-color: #f3eef0;
   display: flex;
-  flex: 1;
   justify-content: center;
   flex-direction: column;
 }
@@ -9,12 +8,12 @@
   flex: 1;
   margin: 0 0 30px;
   min-height: 400px;
-  /* box-shadow: 1px 0px 0px #33333380; */
+  box-shadow: 1px 0px 5px #33333380;
 }
 
 .heroDetails {
   flex: 1;
-  margin: 0 0 30px;
+  margin: 0 0 0px;
   flex-direction: column;
 }
 .heroDetails p {
