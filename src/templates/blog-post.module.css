@@ -48,7 +48,7 @@
 }
 
 .lightbox {
-  background-color: #990000cc;
+  background-color: #333333;
 }
 
 .testimonial blockquote {
@@ -59,10 +59,10 @@
 
   background: none;
   font-family: Georgia, serif;
-  /* font-size: 1.5em; */
+  font-size: 1.1em;
   font-style: italic;
   line-height: 1.4 !important;
-  margin: 0;
+  margin: 0 15px;
   position: relative;
   /* text-shadow: 0 1px white; */
   z-index: 600;
@@ -102,9 +102,28 @@
   .heroImage {
     border-radius: 50%;
     margin: 0 30px 30px 0;
-    height: 400px;
-    max-width: 400px;
-    min-width: 400px;
+    height: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    align-self: start;
+  }
+
+  /* .heroDetails p {
+    font-weight: 2em;
+    font-size: 1.8em;
+    font-style: italic;
+  } */
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+  }
+  .heroImage {
+    border-radius: 50%;
+    margin: 0 30px 30px 0;
+    height: 360px;
+    max-width: 360px;
+    min-width: 360px;
   }
 
   .heroDetails p {
@@ -114,6 +133,13 @@
   }
 }
 @media only screen and (min-width: 900px) {
+  .heroImage {
+    border-radius: 50%;
+    margin: 0 30px 30px 0;
+    height: 400px;
+    max-width: 400px;
+    min-width: 400px;
+  }
   .blogImages {
     min-width: 300px;
     margin: 30px 5px;

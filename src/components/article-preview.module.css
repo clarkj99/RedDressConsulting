@@ -20,3 +20,8 @@
 .image:hover {
   box-shadow: 0px 1px 14px #99002850;
 }
+.description {
+  font-style: italic;
+  font-size: 1.1em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
