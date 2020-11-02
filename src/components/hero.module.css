@@ -31,7 +31,10 @@
 }
 
 .button {
-  border-radius: 0px;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: 600px) {
