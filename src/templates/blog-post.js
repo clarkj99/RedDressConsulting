@@ -53,7 +53,7 @@ class TestimonialTemplate extends React.Component {
                   className={styles.heroImage}
                   alt={post.title}
                   fluid={post.heroImage.fluid}
-                  imgStyle={{ objectPosition: "top", objectFit: "cover", height: "100%" }}
+                  imgStyle={{}}
                 />
 
                 <div className={styles.heroDetails}>
