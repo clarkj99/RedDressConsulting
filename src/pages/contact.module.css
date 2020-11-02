@@ -24,14 +24,32 @@
   flex: 1;
   flex-direction: row;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  flex: 3;
+  margin-right: 30px;
+}
+.links {
+  flex: 2;
+  flex-direction: row;
+}
 
 @media only screen and (min-width: 600px) {
   .hero {
     flex-direction: row;
   }
   .heroImage {
-    max-height: 600px;
+    max-height: 80vmax;
     margin: 0 30px 30px 0;
     /* width: 400px; */
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .container {
+    flex-direction: row;
   }
 }

@@ -1,0 +1,27 @@
+.field {
+  /* flex: 1; */
+  display: flex;
+}
+
+.field input,
+.field textarea {
+  flex: 1;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: azure;
+  border-radius: 10px;
+  border: 0;
+  min-height: 3em;
+  outline: none;
+  font-family: Roboto;
+}
+
+.field button {
+  border-radius: 10px;
+  margin: 10px 0;
+  flex: 1;
+  border: none;
+}
+.field button:hover {
+  border: none;
+}

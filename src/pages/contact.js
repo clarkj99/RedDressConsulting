@@ -7,6 +7,8 @@ import styles from './contact.module.css'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import EmailForm from '../components/EmailForm'
+
 class ContactIndex extends React.Component {
 
   render() {
@@ -33,27 +35,34 @@ class ContactIndex extends React.Component {
                     __html: author.node.contactDescription.childMarkdownRemark.html,
                   }}
                 />
-                <div className={{}} />
-                <h2>Social Media</h2>
-                <div>
+                <div className={styles.container}>
+                  <div className={styles.form}>
+                    <h2>Contact Form</h2>
+                    <EmailForm />
+                    {/* <div>
                   <a href={author.node.linkedIn} target="blank">
-                    <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+                  <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                   </a>
-                </div>
-                <div>
-                  <a href={author.node.facebook} target="blank">
-                    <FontAwesomeIcon icon={faFacebookSquare} /> Facebook
+                </div> */}
+                  </div>
+                  <div className={styles.links}>
+                    <div>
+                      <h2>Social Media</h2>
+                      <a href={author.node.facebook} target="blank">
+                        <FontAwesomeIcon icon={faFacebookSquare} /> Facebook
                   </a>
-                </div>
-                <div>
-                  <a href={author.node.instagram} target="blank">
-                    <FontAwesomeIcon icon={faInstagramSquare} /> Instagram
+                    </div>
+                    <div>
+                      <a href={author.node.instagram} target="blank">
+                        <FontAwesomeIcon icon={faInstagramSquare} /> Instagram
                   </a>
+                    </div>
+                    <h2>Phone</h2>
+                    <a href={`tel:${author.node.phone}`}>{author.node.phone}</a>
+                    {/* <h2>Email</h2>
+                <a href={`tel:${author.node.email}`}>{author.node.email}</a> */}
+                  </div>
                 </div>
-                <h2>Phone</h2>
-                <a href={`tel:${author.node.phone}`}>{author.node.phone}</a>
-                <h2>Email</h2>
-                <a href={`tel:${author.node.email}`}>{author.node.email}</a>
               </div>
             </div>
           </section>
