@@ -15,11 +15,17 @@ export default ({ data }) => {
         </BackgroundImage>
         <div className={styles.heroDetails}>
           <h3 className={styles.heroHeadline}>{data.title}</h3>
-          <p className={styles.heroTitle}>{data.shortBio.shortBio}</p>
+          {/* <p className={styles.heroTitle}>{data.shortBio.shortBio}</p> */}
+          <div className={styles.heroTitle}
+            dangerouslySetInnerHTML={{
+              __html: data.shortBio.childMarkdownRemark.html,
+            }}
+          >
+          </div>
           <Link to="/contact/" className={'button ' + styles.button}>Contact Me</Link>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
 
   )
 }

@@ -1,0 +1,37 @@
+.hero {
+  background-color: #f3eef0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.heroImage {
+  flex: 1;
+  margin: 0 0 30px;
+  max-height: 400px;
+  box-shadow: 1px 0px 5px #33333380;
+  border-radius: 30px;
+}
+
+.heroDetails {
+  flex: 1;
+  margin: 0 0 30px;
+  flex-direction: column;
+}
+
+.section {
+  min-height: 80vh;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+  }
+  .heroImage {
+    max-height: 600px;
+    margin: 0 30px 30px 0;
+    /* width: 400px; */
+  }
+}

@@ -47,6 +47,11 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulTestimonial(
       limit: 4
       sort: { fields: [publishDate], order: DESC }
@@ -75,6 +80,9 @@ export const pageQuery = graphql`
         node {
           name
           shortBio {
+            childMarkdownRemark {
+              html
+            }
             shortBio
           }
           title

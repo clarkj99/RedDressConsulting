@@ -70,11 +70,12 @@ class TestimonialTemplate extends React.Component {
                 <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-evenly" }}>
                   {
                     post.photoGroup.map(
-                      (photo, i) => <a onClick={() => this.setState({
+                      (photo, i) => <button key={i} onClick={() => this.setState({
                         lightboxIsOpen: true,
                         photoIndex: i
 
-                      })}>
+                      })}
+                        className={styles.button}>
                         <Img
                           className={styles.blogImages}
                           fluid={photo.fluid}
@@ -82,7 +83,7 @@ class TestimonialTemplate extends React.Component {
                           imgStyle={{ objectPosition: "top", objectFit: "cover", height: "100%" }}
                         // style={{ flex: 1, maxHeight: 400, minWidth: 400, maxWidth: 600, margin: 30, backgroundPosition: "top", boxShadow: "4px 4px 5px #33333350", borderRadius: 15 }}
                         />
-                      </a>
+                      </button>
                     )
                   }
                 </div>
@@ -99,8 +100,13 @@ export default TestimonialTemplate
 
 export const pageQuery = graphql`
   query TestimonialBySlug($slug: String!) {
-            contentfulTestimonial(slug: {eq: $slug }) {
-            title
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    contentfulTestimonial(slug: {eq: $slug }) {
+      title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
             fluid(cropFocus: TOP,resizingBehavior: FILL,maxWidth: 1280,background: "rgb:f4edee") {
