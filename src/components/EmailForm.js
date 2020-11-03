@@ -5,14 +5,12 @@ class EmailForm extends React.Component {
     state = {}
     render() {
         return (
-            <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
-                <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="contact" />
+            <form method="post" name="contact" action="https://formspree.io/f/mbjpyzla">
                 <div className={styles.field}>
                     <input type="text" name="name" id="name" placeholder="NAME" />
                 </div>
                 <div className={styles.field}>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" />
+                    <input type="email" name="_replyto" id="email" placeholder="EMAIL" />
                 </div>
                 <div className={styles.field}>
                     <textarea name="message" id="message" rows="5" placeholder="MESSAGE" />
