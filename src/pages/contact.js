@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import styles from './contact.module.css'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
 import EmailForm from '../components/EmailForm'
 
 class ContactIndex extends React.Component {
