@@ -30,7 +30,7 @@
 }
 .form {
   flex: 3;
-  margin-right: 30px;
+  margin: 0;
 }
 .links {
   flex: 2;
@@ -51,5 +51,8 @@
 @media only screen and (min-width: 720px) {
   .container {
     flex-direction: row;
+  }
+  .form {
+    margin-right: 30px;
   }
 }
