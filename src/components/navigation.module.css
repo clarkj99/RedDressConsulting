@@ -1,12 +1,26 @@
+.navbar {
+  overflow: hidden;
+  background-color: #f4edee;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 99;
+}
+
+.navContainer {
+  background-color: #f4edee;
+  display: flex;
+  flex-direction: column;
+}
+
 .navigation {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 0;
-  margin: 0;
-  height: 20vh;
-  max-height: 100px;
-  font-size: 1.25em;
+  margin: 0 0 15px;
+  /* max-height: 100px; */
+  font-size: 0.9em;
 }
 
 .navigationItem {
@@ -17,4 +31,43 @@
 
 .navigationItem a {
   color: currentColor;
+}
+
+.logo {
+  font-family: "Great Vibes", cursive;
+  font-size: 2em;
+  text-align: center;
+  color: #ff0028;
+  align-self: center;
+  display: flex;
+  background-color: #f4edee;
+  justify-content: center;
+  text-decoration: none;
+  padding: 5px 0 0;
+  flex: 1;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    font-size: 3em;
+    padding: 5px 15px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logo {
+    align-self: flex-start;
+    justify-content: flex-start;
+    padding: 5px 0 0;
+  }
+
+  .navigation {
+    justify-content: flex-end;
+    align-items: center;
+    margin: 30px;
+  }
 }
