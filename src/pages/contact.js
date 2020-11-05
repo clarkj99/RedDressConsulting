@@ -35,6 +35,7 @@ class ContactIndex extends React.Component {
                     __html: author.node.contactDescription.childMarkdownRemark.html,
                   }}
                 />
+                <div><p>Email me at <a href={`tel:${author.node.email}`}>{author.node.email}</a> or call <a href={`tel:${author.node.phone}`}>{author.node.phone}</a>.</p></div>
                 <div className={styles.container}>
                   <div className={styles.form}>
                     <h2>Contact Form</h2>
@@ -57,10 +58,10 @@ class ContactIndex extends React.Component {
                         <FontAwesomeIcon icon={faInstagramSquare} /> Instagram
                   </a>
                     </div>
-                    <h2>Phone</h2>
+                    {/* <h2>Phone</h2>
                     <a href={`tel:${author.node.phone}`}>{author.node.phone}</a>
-                    {/* <h2>Email</h2>
-                <a href={`tel:${author.node.email}`}>{author.node.email}</a> */}
+                    <h2>Email</h2>
+                    <a href={`tel:${author.node.email}`}>{author.node.email}</a> */}
                   </div>
                 </div>
               </div>

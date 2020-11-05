@@ -7,13 +7,13 @@ class EmailForm extends React.Component {
         return (
             <form method="post" name="contact" action="https://formspree.io/f/mbjpyzla">
                 <div className={styles.field}>
-                    <input type="text" name="name" id="name" placeholder="NAME" />
+                    <input type="text" name="name" id="name" placeholder="NAME" required />
                 </div>
                 <div className={styles.field}>
-                    <input type="email" name="_replyto" id="email" placeholder="EMAIL" />
+                    <input type="email" name="_replyto" id="email" placeholder="EMAIL" required />
                 </div>
                 <div className={styles.field}>
-                    <textarea name="message" id="message" rows="5" placeholder="MESSAGE" />
+                    <textarea name="message" id="message" rows="5" placeholder="MESSAGE" required />
                 </div>
                 <div className={styles.field}>
 
