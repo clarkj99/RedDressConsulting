@@ -18,7 +18,7 @@ const Footer = ({ author }) => {
                     </a>
                 </div>
                 <div>
-                    <a href={`mailto:${author.email}`}>
+                    <a href={`mailto:${author.email}?subject=Contact%20from%20RedDressConsulting.style`}>
                         <FontAwesomeIcon icon={faEnvelopeSquare} />
                     </a>
                 </div>

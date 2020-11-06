@@ -35,7 +35,7 @@ class ContactIndex extends React.Component {
                     __html: author.node.contactDescription.childMarkdownRemark.html,
                   }}
                 />
-                <div><p>Email me at <a href={`tel:${author.node.email}`}>{author.node.email}</a> or call <a href={`tel:${author.node.phone}`}>{author.node.phone}</a>.</p></div>
+                <div><p>Email me at <a href={`mailto:${author.node.email}?subject=Contact%20from%20RedDressConsulting.style`}>{author.node.email}</a> or call <a href={`tel:${author.node.phone}`}>{author.node.phone}</a>.</p></div>
                 <div className={styles.container}>
                   <div className={styles.form}>
                     <h2>Contact Form</h2>
